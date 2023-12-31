@@ -1,38 +1,318 @@
-.App {
-  text-align: center;
+/* Reset some default styles */
+body,ul,li,h1,h2,h3,p {
+  margin: 0;
+  padding: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  font-family: 'Arial', sans-serif;
+  line-height: 1.6;
+  background-color: rgb(0, 0, 0);
+  color: #fff;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+#back_to{
+  margin-top: 6%;
+  margin-left: 40%;
+  color: rgb(95, 221, 95);
+  border-color: none;
+  text-decoration: underline;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+
+nav {
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  padding: 1rem;
+  background-color: black;
+  color: white;
+  border-radius: 100px;
+  border-bottom: 2px solid yellow/* Change to your preferred border color */
+}
+
+
+.logo-container {
+  display: flex; 
+  align-items: center;
+  color: rgb(255 112 0);
+  margin-left: 40px;
+  border-radius: 77px;
+  border-left: 2px solid rgb(213, 175, 104) ;
+  border-right: 2px solid rgb(213, 175, 104) ;
+}
+
+.logo-container h1 {
+  margin-right: 0.5rem;
+  position: relative;
+}
+
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.menu-toggle span {
+  height: 2px;
+  width: 25px;
+  background-color: black;
+  margin: 6px 0;
+  transition: 0.4s;
+  background-color: white;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.nav-links {
+  list-style: none;
+  display: flex;
+}
+
+.nav-links li {
+  margin-right: 20px;
+}
+.nav-links a.active {
+  color: yellow;
+  font-size: 27px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: rgb(0, 250, 0);  
+  font-weight: bold;
+  font-size: 16px;
+}
+
+
+/* Media query for responsiveness */
+@media (max-width: 769px) {
+  .menu-toggle {
+    display: flex;
+    color: #fff;
   }
-  to {
-    transform: rotate(360deg);
+
+  .nav-links {
+    flex-direction: column;
+    position: absolute;
+    top: 155px;
+    left: 0;
+    background-color: black;
+    width: 100%;
+    text-align: center;
+    display: none;
+    border-radius: 20%;
+  }
+
+  .nav-links.open {
+    display: flex;
+  }
+
+  .menu-toggle.open span:nth-child(1) {
+    transform: rotate(-45deg) translate(-5px, 6px);
+  }
+
+  .menu-toggle.open span:nth-child(2) {
+    opacity: 0;
+  }
+
+  .menu-toggle.open span:nth-child(3) {
+    transform: rotate(45deg) translate(-5px, -6px);
+  }
+
+  input {
+    padding: 8px;
+    margin-bottom: 20px;
+    border-radius: 25px;
+    background-color: black;
+    font-size: 20px;
+    margin-left: 30%;
+    color: white;
+    border-color: #fff;
+  }
+
+
+}
+
+/* Home page styles */
+div {
+  margin: 20px;
+}
+
+h1 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+input {
+  padding: 8px;
+  margin-bottom: 20px;
+  border-radius: 25px;
+  background-color: black;
+  font-size: 20px;
+  margin-left: 37%;
+  color: white;
+  border-color: #fff;
+}
+
+ul {
+  list-style: none;
+}
+
+li {
+  margin-bottom: 10px;
+  display: contents;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+}
+
+/* About and Contact page styles */
+h2 {
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+}
+
+p {
+  font-size: 1.2rem;
+  line-height: 1.5;
+}
+
+/* Semester page styles */
+button {
+  padding: 10px;
+  margin-top: 10px;
+  cursor: pointer;
+  display: flex;
+  background-color: black;
+}
+
+/* PdfDownload page styles */
+button,
+a {
+  display: inline-block;
+  margin-right: 10px;
+  margin-top: 10px;
+  padding: 10px;
+  text-decoration: none;
+  border-radius:100px;
+  border-bottom: 2px solid rgb(255, 255, 255);
+  border-top: 2px solid rgb(255, 255, 255);
+  color: rgb(30, 177, 193);
+  cursor: pointer;
+  font-size: larger;
+}
+
+a:hover,
+button:hover {
+  /* background-color: white; */
+  /* color: black; */
+  font-size: 15px;
+}
+
+@media (max-width: 640px){
+
+  body{
+    font-size: 10px;
+  }
+
+  input {
+    padding: 8px;
+    margin-bottom: 20px;
+    border-radius: 25px;
+    background-color: black;
+    font-size: 20px;
+    margin-left: 13px;
+    color: white;
+  }
+ 
+
+}
+
+@media (max-width: 360px){
+
+  input {
+    padding: 8px;
+    margin-bottom: 20px;
+    border-radius: 25px;
+    background-color: black;
+    font-size: 20px;
+    margin-left: -10px;
+    color: white;
+  }
+
+  nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    padding-left: 0%;
+    background-color: black;
+    color: white;
+    border-radius: 35px;
+  }
+
+  button,
+  a{
+    font-size: medium;
+  }
+
+  #back_to {
+    margin-top: 14%;
+    margin-left: 12%;
   }
 }
+
+#Subject-h1{
+  color: #fe0000;
+}
+#semester-h1{
+  color: white;
+  border-radius: 100px;
+  border-bottom: #fe0000;
+}
+
+#semester-h11{
+  color: #fe0000;
+}
+#semester-h2{
+  color:#fe0000;
+}
+
+#back_too{
+  color: rgb(95, 221, 95);
+  text-decoration: underline;
+  margin-left: 35px;
+}
+
+#download{
+  font-size: xx-large;
+  background-color: rgb(0, 0, 0);
+  color: #0077ff;
+  border-radius: 0px;
+}
+#download:hover{
+  font-size: 30px;
+  color: rgb(252, 250, 250);
+  background-color: #141414;
+ border-top:rgb(255, 253, 253) ;
+ border-color: white;
+
+}
+#h1{
+  color: rgb(from orange r g b);
+}
+#aboutus{
+   color: rgb(0, 255, 0);
+}
+  
+  
+  
+
+
+
+
+
+
