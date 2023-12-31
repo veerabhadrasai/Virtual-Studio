@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/Virtual-Studio/static/css/main.44310d29.css",
+    "main.js": "/Virtual-Studio/static/js/main.53e3b57e.js",
+    "static/js/787.2a35cd6d.chunk.js": "/Virtual-Studio/static/js/787.2a35cd6d.chunk.js",
+    "index.html": "/Virtual-Studio/index.html",
+    "main.44310d29.css.map": "/Virtual-Studio/static/css/main.44310d29.css.map",
+    "main.53e3b57e.js.map": "/Virtual-Studio/static/js/main.53e3b57e.js.map",
+    "787.2a35cd6d.chunk.js.map": "/Virtual-Studio/static/js/787.2a35cd6d.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.44310d29.css",
+    "static/js/main.53e3b57e.js"
+  ]
+}
